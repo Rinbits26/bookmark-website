@@ -1,0 +1,130 @@
+body {
+  /*start here  */
+    font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #bc487e, #e24d0d);
+
+   /* background: linear-gradient(135deg, #b6d9ee, #462f48); */
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #0d0d0d;
+ }
+   
+ .container {
+  /*start here  */
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;;
+   background: linear-gradient(135deg, #b6d9ee, #462f48);
+    background: linear-gradient(135deg, #1390de, #eba0f1);
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 20px;
+ }
+   
+ h1 {
+    /*start here  */
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+ }
+    
+ .input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-container input {
+
+  padding:8px 8px;
+  outline: none;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+}
+
+.input-container input::placeholder {
+  color: #a0a0a0;
+}
+
+#add-bookmark-btn {
+   /*start here  */
+   padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: #150404;
+  color: #e0e0e0;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+ }
+   
+ #add-bookmark-btn:hover {
+  background-color: #232222e3;
+ }
+ #bookmark-list {
+  /*start here  */
+    list-style-type: none;
+  padding: 0;
+ }
+   
+ #bookmark-list li {
+  /*start here  */
+    background: #ffffff;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+ 
+ .bookmark-item button {
+  /*start here  */
+    background-color: #c9184a;
+  color: #e0e0e0;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+ }
+
+  .bookmark-item button:hover {
+      background-color: #ff4d6d;
+  }
+
+ @keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#bookmark-list li {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@media (min-width: 480px) {
+  .bookmark-inputs {
+    flex-direction: row;
+  }
+
+  .todo-input[placeholder="Enter a bookmark url"] {
+    flex: 2;
+  }
+
+  .todo-input[placeholder="Enter a category"] {
+    flex: 1;
+  }
+}
